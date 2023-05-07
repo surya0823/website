@@ -1,0 +1,22 @@
+// Import bootstrap file
+@import url("../plugins/bootstrap/css/bootstrap.min.css");
+// IMPORT ALL SCSS REQUIRED FILES ----------
+//--Abstracts --
+@import "abstract/variables";
+@import "abstract/functions";
+@import "abstract/mixins";
+//--Base --
+@import "base/typography";
+//--components--
+@import "components/buttons";
+@import "components/popup";
+@import "components/animations";
+@import "components/cards";
+
+//--components--
+@import "layout/header";
+@import "layout/footer";
+@import "layout/forms";
+//--theme--
+@import "theme/theme";
+//--pages--

@@ -1,0 +1,148 @@
+/*
+    ============ MIXINS ==============
+*/
+
+@mixin flexcenter($direction) {
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  flex-direction: $direction;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+@mixin transition($time, $function) {
+  -webkit-transition: #{$time} #{$function};
+  -moz-transition: #{$time} #{$function};
+  transition: #{$time} #{$function};
+}
+
+@mixin transitionwithprop($time, $function, $prop) {
+  -webkit-transition: #{$time} #{$function} #{$prop};
+  -moz-transition: #{$time} #{$function} #{$prop};
+  transition: #{$time} #{$function} #{$prop};
+}
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin animation($animation, $animationtime, $interval) {
+  -webkit-animation: $animation $animationtime $interval;
+  -moz-animation: $animation $animationtime $interval;
+  animation: $animation $animationtime $interval;
+}
+
+@mixin linear-gradient($direction, $color1, $color2, $color3) {
+  background-image: -webkit-linear-gradient(
+    $direction,
+    $color1,
+    $color2,
+    $color3
+  );
+  background-image: -o-linear-gradient($direction, $color1, $color2, $color3);
+  background-image: -moz-linear-gradient($direction, $color1, $color2, $color3);
+  background-image: linear-gradient($direction, $color1, $color2, $color3);
+}
+
+@mixin paddingx($left, $right) {
+  padding-left: #{$left}px;
+  padding-right: #{$right}px;
+}
+
+@mixin paddingy($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin circle($size) {
+  width: #{$size}px;
+  height: #{$size}px;
+  border-radius: 100%;
+}
+
+@mixin border-radius($val) {
+  border-radius: #{$val}px;
+}
+
+@mixin border-radius-leftside($val) {
+  border-top-left-radius: #{$val}px;
+  border-bottom-left-radius: #{$val}px;
+}
+
+@mixin border-radius-rightside($val) {
+  border-top-right-radius: #{$val}px;
+  border-bottom-right-radius: #{$val}px;
+}
+
+@mixin border-radius-topside($val) {
+  border-top-left-radius: #{$val}px;
+  border-top-right-radius: #{$val}px;
+}
+
+@mixin border-radius-bottomside($val) {
+  border-bottom-left-radius: #{$val}px;
+  border-bottom-right-radius: #{$val}px;
+}
+
+@mixin rounded-box($boxwidth, $boxheight, $radius) {
+  width: #{$boxwidth}px;
+  height: #{$boxheight}px;
+  border-radius: #{$radius}px;
+}
+
+@mixin customimgcircle($size, $background) {
+  width: #{$size}px;
+  height: #{$size}px;
+  border-radius: 100%;
+  background: $background;
+  overflow: hidden;
+}
+
+@mixin paddingX($value) {
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin paddingY($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin marginX($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin marginY($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin square($size) {
+  width: #{$size}px;
+  height: #{$size}px;
+}
+
+@mixin fonts($fw, $fs, $lh) {
+  font-weight: #{$fw};
+  font-size: #{$fs}px;
+  line-height: #{$lh}px;
+}
+
+// --- responsive media
+@mixin responsivemax($size) {
+  @media (max-width: $size + "px") {
+    @content;
+  }
+}
+
+@mixin responsivemin($size) {
+  @media (min-width: $size + "px") {
+    @content;
+  }
+}

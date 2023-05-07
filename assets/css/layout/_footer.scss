@@ -1,0 +1,107 @@
+/*=======  Footer  =======*/
+footer {
+  position: relative;
+  z-index: 1;
+  background: map-get(map-get($palette, tehrehic), 100);
+  padding: 120px 40px 40px;
+  margin-top: 120px;
+
+  @include responsivemax(990) {
+    padding: 120px 28px 40px;
+  }
+  @include responsivemax(767) {
+    padding: 120px 12px 40px;
+  }
+
+  .footer-widget {
+    .widget {
+      margin-bottom: 3rem;
+      @include responsivemax(990) {
+        padding-left: 2rem;
+      }
+      @include responsivemax(575) {
+        padding-left: 0.5rem;
+      }
+      .widget-title {
+        color: map-get(map-get($palette, dark), 0);
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: map-get(map-get($palette, dark), 0);
+        opacity: 0.7;
+      }
+
+      &.news-letter {
+        @include responsivemax(990) {
+          margin-top: 4rem;
+        }
+        img {
+          height: 24px;
+        }
+        hr {
+          width: 286px;
+          height: 1px;
+          background: map-get(map-get($palette, tehrehic), 90);
+        }
+
+        button {
+          padding: 0 70px;
+          height: 50px;
+          background: map-get(map-get($palette, tehrehic), 100);
+          border: 1px solid #7c63e4;
+        }
+        input {
+          background: map-get(map-get($palette, tehrehic), 90);
+          border-radius: 4px;
+          padding: 0 10px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    @include responsivemax(990) {
+      padding-left: 2rem;
+    }
+    @include responsivemax(575) {
+      padding-left: 0.5rem;
+    }
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: map-get(map-get($palette, dark), 0);
+    }
+    ul {
+      list-style-type: none;
+    }
+    .policy-terms {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+
+      @include responsivemax(990) {
+        flex-direction: column;
+        margin-bottom: 4rem;
+      }
+    }
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 0.5rem;
+
+      @include responsivemax(990) {
+        justify-content: start;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

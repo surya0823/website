@@ -1,0 +1,27 @@
+.navbar-section {
+  @include paddingy(30px, 16px);
+  img {
+    height: 24px;
+  }
+  .navbar-toggler {
+    border: none;
+    padding: 10px 6px;
+    outline: none;
+
+    .toggler-icon-lg {
+      width: 30px;
+      height: 3px;
+      margin: 1.5px;
+      border-radius: 6px;
+    }
+    .toggler-icon-sm {
+      width: 25px;
+      height: 3px;
+      margin: 1.5px;
+      border-radius: 6px;
+    }
+  }
+  button:nth-child(1) {
+    padding: 10px;
+  }
+}

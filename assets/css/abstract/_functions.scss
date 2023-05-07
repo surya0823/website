@@ -1,0 +1,8 @@
+/*
+    ============ FUNCTIONS REQUIRED ==============
+*/
+@function widthpartition($totalwidth,$part){
+    $totalwidth: 1;
+    $totalwidth: $totalwidth / $part;
+    @return $totalwidth;
+}

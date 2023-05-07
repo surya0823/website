@@ -1,0 +1,107 @@
+@keyframes buttonFirstHalf {
+    0%{
+        width: 20%;
+        height: 80%;
+        top: -5%;
+        left: -2%;
+    }
+
+    16.7%{
+        top: -5%;
+        left: -2%;
+        height: 50%;
+        width: 50%;
+    }
+
+    33.3%{
+        top: -5%;
+        left: 0%;
+        height: 50%;
+        width: 80%;
+    }
+
+    50%{
+        top: -5%;
+        width: 20%;
+        height: 80%;
+        left: 81%;
+    }
+    
+    66.7%{
+        top: 55%;
+        width: 50%;
+        height: 50%;
+        left: 51%;
+    }
+
+    83.3%{
+        top: 55%;
+        left:-2%;
+        width: 80%;
+        height: 50%;
+    }
+
+    100% {
+        top: 22%;
+        left: -2%;
+        width: 20%;
+        height: 80%;
+    }
+}
+
+@keyframes buttonSecondHalf {
+    0%{
+        top: 24%;
+        left:82%;
+        width: 20%;
+        height: 80%;
+    }
+
+    16.7%{
+        top: 55%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+    }
+
+    33.3% {
+        top: 55%;
+        left: 0%;
+        width: 80%;
+        height: 50%;
+    }
+
+    50%{
+        left: -2%;
+        height: 80%;
+        width: 20%;
+        top: 24%;
+    }
+
+    66.7%{
+        top: -5%;
+        width: 20%;
+        height: 50%;
+        left:-2%;
+    }
+
+    83.3% {
+        top: -5%;
+        width: 80%;
+        height: 20%;
+        left: 20%;
+    }
+
+    100%{
+        top: -5%;
+        height: 80%;
+        width: 20%;
+        left: 82%;
+    }
+}
+
+@keyframes animatedText {
+    to{
+        background-position: 100%;
+    }
+}

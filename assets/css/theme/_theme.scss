@@ -1,0 +1,185 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.tg-gredient_wrapper {
+  mix-blend-mode: hard-light;
+  filter: blur(2px);
+  z-index: 0;
+  opacity: 0.5;
+
+  .tg-gredient_1 {
+    width: 40%;
+    height: 30%;
+    background: linear-gradient(
+      90deg,
+      map-get(map-get($palette, tehrehic), 50) 0%,
+      map-get(map-get($palette, sky), 50) 100%
+    );
+    transform: matrix(-0.96, 0.28, -0.24, -0.97, 0, 0);
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    filter: blur(120px);
+  }
+
+  .tg-gredient_2 {
+    background: linear-gradient(
+      90deg,
+      map-get(map-get($palette, tehrehic), 50) 0%,
+      map-get(map-get($palette, yellow), 50) 100%
+    );
+    transform: matrix(0.98, 0.22, -0.18, 0.98, 0, 0);
+    position: absolute;
+    filter: blur(120px);
+    width: 40%;
+    height: 25%;
+    bottom: 20%;
+    left: 25%;
+  }
+
+  .tg-gredient_3 {
+    background: linear-gradient(
+      90deg,
+      map-get(map-get($palette, tehrehic), 50) 0%,
+      map-get(map-get($palette, magenta), 50) 100%
+    );
+    transform: matrix(-0.96, 0.28, -0.24, -0.97, 0, 0) rotate(-150deg);
+    filter: blur(120px);
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    top: 40%;
+    left: 10%;
+  }
+}
+
+.tg-coming-soon-parent {
+  img {
+    width: 25%;
+    @include responsivemax(575) {
+      width: 50%;
+    }
+  }
+  h1 {
+    font-size: 7rem;
+    color: transparent;
+    font-weight: 600;
+    line-height: 13rem;
+    margin-top: 2rem;
+    @include linear-gradient(
+      91.75deg,
+      map-get(map-get($palette, tehrehic), 50) 25.18%,
+      map-get(map-get($palette, magenta), 50) 55.63%,
+      map-get(map-get($palette, green), 50) 75%
+    );
+    animation: animatedText 5s infinite alternate-reverse;
+    background-size: 300%;
+    background-position: -100%;
+
+    @include responsivemax(1399) {
+      font-size: 6rem;
+      margin-top: 2.5rem;
+      line-height: 10.5rem;
+    }
+
+    @include responsivemax(991) {
+      font-size: 5rem;
+      margin-top: 2.5rem;
+      line-height: 10.5rem;
+    }
+
+    @include responsivemax(767) {
+      font-size: 3rem;
+      margin-top: 2.5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 50%;
+    margin: auto;
+    @include responsivemax(1399) {
+      font-size: 1rem;
+    }
+
+    @include responsivemax(991) {
+      max-width: 80%;
+    }
+
+    @include responsivemax(767) {
+      max-width: 100%;
+      font-size: 0.875rem;
+      margin-top: 30px;
+    }
+  }
+
+  form {
+    max-width: 40%;
+    margin: 100px auto 0 auto;
+    @include responsivemax(1580) {
+      margin: 80px auto 0 auto;
+    }
+
+    @include responsivemax(1399) {
+      margin: 60px auto 0 auto;
+    }
+
+    @include responsivemax(1199) {
+      max-width: 50%;
+    }
+
+    @include responsivemax(991) {
+      max-width: 70%;
+    }
+
+    @include responsivemax(767) {
+      max-width: 100%;
+    }
+
+    input {
+      border-radius: 0;
+      border: 1px solid transparent;
+    }
+
+    button {
+      height: 50px;
+      padding: 11px 20px;
+      @include responsivemax(575) {
+        max-width: 200px;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.subscribe-content {
+  @include flexcenter(column);
+
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
+    max-width: 70%;
+
+    @include responsivemax(991) {
+      max-width: 80%;
+    }
+
+    @include responsivemax(767) {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}

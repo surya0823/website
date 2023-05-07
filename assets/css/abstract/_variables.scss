@@ -1,0 +1,224 @@
+// --------===================================
+// ------ GLOBAL VARIABLES ----------
+// --------===================================
+
+//$primaryfont: 'Montserrat', sans-serif;
+//$secondaryfont: 'Montserrat', sans-serif;
+
+//BRAND COLOR
+$palette: (
+  tehrehic: (
+    r5: #f8f7fe,
+    10: #f2effc,
+    15: #e5e0fa,
+    20: #cbc1f4,
+    30: #b0a1ef,
+    40: #9682e9,
+    50: #7c63e4,
+    60: #7059cd,
+    70: #634fb6,
+    80: #32285b,
+    90: #19142e,
+    100: #0c0a17,
+    150: rgba(63, 57, 88, 0.4),
+  ),
+  dark: (
+    0: #ffffff,
+    5: #f5f6f6,
+    10: #ececed,
+    15: #d9dadb,
+    20: #b2b4b8,
+    30: #8c8f94,
+    40: #656971,
+    50: #3f444d,
+    60: #393d45,
+    70: #32363e,
+    80: #26292e,
+    90: #191b1f,
+    100: #0d0e0f,
+  ),
+
+  sky: (
+    5: #f6fbfc,
+    10: #edf6f9,
+    15: #dbeef3,
+    20: #b7dce8,
+    30: #94cbdc,
+    40: #70b9d1,
+    50: #4ca8c5,
+    60: #4497b1,
+    70: #3d869e,
+    80: #2e6576,
+    90: #1e434f,
+    100: #0f2227,
+  ),
+
+  magenta: (
+    5: #fcf6fb,
+    10: #f9edf8,
+    15: #f3dbf1,
+    20: #e8b7e3,
+    30: #dc94d5,
+    40: #d170c7,
+    50: #c54cb9,
+    60: #b144a6,
+    70: #9e3d94,
+    80: #762e6f,
+    90: #4f1e4a,
+    100: #270f25,
+  ),
+
+  green: (
+    5: #f6fcf9,
+    10: #edf9f3,
+    15: #dbf3e6,
+    20: #b7e8ce,
+    30: #94dcb5,
+    40: #70d19d,
+    50: #4cc584,
+    60: #44b177,
+    70: #3d9e6a,
+    80: #2e764f,
+    90: #1e4f35,
+    100: #1e4f35,
+  ),
+
+  red: (
+    5: #fef9f9,
+    10: #fdf2f3,
+    15: #fce6e6,
+    20: #f8cccd,
+    30: #f5b3b5,
+    40: #f1999c,
+    50: #ee8083,
+    60: #d67376,
+    70: #be6669,
+    80: #8f4d4f,
+    90: #5f3334,
+    100: #301a1a,
+  ),
+
+  yellow: (
+    5: #fefdf7,
+    10: #fefbf0,
+    15: #fdf8e0,
+    20: #faf1c2,
+    30: #f8eaa3,
+    40: #f5e385,
+    50: #f3dc66,
+    60: #dbc65c,
+    70: #c2b052,
+    80: #92843d,
+    90: #615829,
+    100: #312c14,
+  ),
+
+  orange: (
+    5: #fefbf7,
+    10: #fef6ef,
+    15: #fdeedf,
+    20: #fbddbf,
+    30: #f8cb9e,
+    40: #f6ba7e,
+    50: #f4a95e,
+    60: #dc9855,
+    70: #c3874b,
+    80: #926538,
+    90: #624426,
+    100: #312213,
+  ),
+);
+
+@for $i from 0 through 400 {
+  // tehrehic
+  [class*="text-tehrehic-#{$i}"] {
+    color: map-get(map-get($palette, tehrehic), $i);
+  }
+
+  [class*="bg-tehrehic-#{$i}"] {
+    background-color: map-get(map-get($palette, tehrehic), $i);
+  }
+
+  // dark
+  [class*="text-dark-#{$i}"] {
+    color: map-get(map-get($palette, dark), $i);
+  }
+
+  [class*="bg-dark-#{$i}"] {
+    background-color: map-get(map-get($palette, dark), $i);
+  }
+
+  //sky
+  [class*="text-sky-#{$i}"] {
+    color: map-get(map-get($palette, sky), $i);
+  }
+
+  [class*="bg-sky-#{$i}"] {
+    background-color: map-get(map-get($palette, sky), $i);
+  }
+
+  //magenta
+  [class*="text-magenta-#{$i}"] {
+    color: map-get(map-get($palette, magenta), $i);
+  }
+
+  [class*="bg-magenta-#{$i}"] {
+    background-color: map-get(map-get($palette, magenta), $i);
+  }
+
+  //green
+  [class*="text-green-#{$i}"] {
+    color: map-get(map-get($palette, green), $i);
+  }
+
+  [class*="bg-green-#{$i}"] {
+    background-color: map-get(map-get($palette, green), $i);
+  }
+
+  //red
+  [class*="text-red-#{$i}"] {
+    color: map-get(map-get($palette, red), $i);
+  }
+
+  [class*="bg-red-#{$i}"] {
+    background-color: map-get(map-get($palette, red), $i);
+  }
+
+  //yellow
+  [class*="text-yellow-#{$i}"] {
+    color: map-get(map-get($palette, yellow), $i);
+  }
+
+  [class*="bg-yellow-#{$i}"] {
+    background-color: map-get(map-get($palette, yellow), $i);
+  }
+
+  //orange
+  [class*="text-orange-#{$i}"] {
+    color: map-get(map-get($palette, orange), $i);
+  }
+
+  [class*="bg-orange-#{$i}"] {
+    background-color: map-get(map-get($palette, orange), $i);
+  }
+
+  // [class*='mt-#{$i}'] {
+  //    margin-top: #{$i}rem;
+  // }
+}
+
+h1 {
+  font-size: 32px;
+  @media screen {
+    font-size: 28px;
+  }
+}
+
+@media screen {
+  // h1{
+
+  // }
+
+  h2 {
+  }
+}

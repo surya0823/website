@@ -1,0 +1,52 @@
+.animatedBttn {
+  position: relative;
+  &:hover {
+    &:before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(
+        45deg,
+        #060708 0%,
+        #f3dc66 30%,
+        #7c63e4 40%,
+        #f3dc66 80%,
+        #060708 100%
+      );
+      top: -2px;
+      height: 100%;
+      width: 50%;
+      left: -2px;
+      z-index: -1;
+      -webkit-animation: buttonFirstHalf 5s linear infinite;
+      animation: buttonFirstHalf 5s linear infinite;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(
+        60deg,
+        rgba(6, 7, 8, 0) 0%,
+        #c34dbb 30%,
+        #8062e2 65%,
+        #c34dbb 50%,
+        rgba(6, 7, 8, 0)
+      );
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      -webkit-animation: buttonSecondHalf 5s linear infinite;
+      animation: buttonSecondHalf 5s linear infinite;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+  }
+}
